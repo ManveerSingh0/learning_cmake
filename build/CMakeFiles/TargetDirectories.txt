@@ -1,3 +1,0 @@
-/mnt/d/programming/learning_cmake/build/CMakeFiles/main.dir
-/mnt/d/programming/learning_cmake/build/CMakeFiles/edit_cache.dir
-/mnt/d/programming/learning_cmake/build/CMakeFiles/rebuild_cache.dir
