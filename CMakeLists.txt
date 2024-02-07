@@ -14,5 +14,33 @@ project(
     VERSION 1.0.0 
     LANGUAGES C CXX #CXX instead of c++ 
 ) 
+#to add multiple files/directories name use this function
+#define src first because these are libraries and they need to be used in our main function
+add_subdirectory(src)
+add_subdirectory(app)
 
-add_executable(main main.cpp)
+
+#[===[
+--to add libraries use this function
+--not putting them in different files to improve code
+
+
+add_library(
+    library STATIC 
+    src/player.cpp 
+    src/player.h
+)
+
+
+add_executable(main app/main.cpp) 
+
+
+
+--you need to tell compiler that you have executable 
+and library to link , to do that use this functiona 
+
+-- target_link_libraries(main PUBLIC library)
+
+]===] 
+#To specificly execute file like library only use this 
+#cmake --build . --target library

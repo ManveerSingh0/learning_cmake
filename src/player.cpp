@@ -1,5 +1,5 @@
-#include "player.h"
 #include <iostream>
+#include "player.h"
 
 
 void Player::talk(){
