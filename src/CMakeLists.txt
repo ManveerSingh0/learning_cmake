@@ -1,10 +1,10 @@
 add_library(
-    library STATIC 
-    player.cpp 
+    ${LIBRARY_NAME} STATIC 
+    player.cpp
 )
 
-
 target_include_directories(
-    library PUBLIC 
+    ${LIBRARY_NAME} PUBLIC 
     "./"
+    "${CMAKE_BINARY_DIR}/configured_files/include"
 )

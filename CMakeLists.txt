@@ -14,11 +14,31 @@ project(
     VERSION 1.0.0 
     LANGUAGES C CXX #CXX instead of c++ 
 ) 
+
+
+
+set(CMAKE_CXX_STANDARD              20)
+set(CMAKE_CXX_STANDARD_REQUIRED     ON)
+set(CMAKE_CXX_EXTENSIONS            OFF)
+
+
+#variables in cmake
+set(LIBRARY_NAME library)
+set(EXECUTABLE_NAME main)
+
+#to turn this on while compiling not here type 
+#cmake .. -DCOMPILE_EXECUTABLE=ON //variable name without space after -D 
+option(COMPILE_EXECUTABLE "whether to compile or not" ON)
+
 #to add multiple files/directories name use this function
 #define src first because these are libraries and they need to be used in our main function
+add_subdirectory(config)
 add_subdirectory(src)
-add_subdirectory(app)
-
+if(COMPILE_EXECUTABLE)
+    add_subdirectory(app)
+else()
+    message("nope")
+endif()
 
 #[===[
 --to add libraries use this function
