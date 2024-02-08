@@ -1,6 +1,17 @@
+set(
+    LIBRARY_SOURCE
+    "player.cpp"
+)
+set(
+    LIBRARY_HEADERS
+    "player.h"
+)
+
+
 add_library(
     ${LIBRARY_NAME} STATIC 
-    player.cpp
+    ${LIBRARY_SOURCE}
+    ${LIBRARY_HEADERS}
 )
 
 target_include_directories(
