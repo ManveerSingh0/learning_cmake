@@ -25,6 +25,8 @@ set(CMAKE_CXX_EXTENSIONS            OFF)
 #variables in cmake
 set(LIBRARY_NAME library)
 set(EXECUTABLE_NAME main)
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/") #you specified where the module files are
+include(addgitsubmodules) #this include cmake MODULE files only 
 
 #to turn this on while compiling not here type 
 #cmake .. -DCOMPILE_EXECUTABLE=ON //variable name without space after -D 
@@ -32,6 +34,7 @@ option(COMPILE_EXECUTABLE "whether to compile or not" ON)
 
 #to add multiple files/directories name use this function
 #define src first because these are libraries and they need to be used in our main function
+add_git_submodule(external/SFML)
 add_subdirectory(config)
 add_subdirectory(src)
 if(COMPILE_EXECUTABLE)
