@@ -6,15 +6,5 @@ project(
   LANGUAGES CXX C
   )
 
-
-add_library(
-  library SHARED
-  my_lib.cpp
-  )
-
-add_executable(
-  ${PROJECT_NAME}
-  main.cpp
-  )
-
-target_link_libraries(${PROJECT_NAME} PUBLIC library)
+add_subdirectory(src)
+add_subdirectory(app)
