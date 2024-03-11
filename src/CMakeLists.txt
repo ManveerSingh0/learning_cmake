@@ -1,9 +1,9 @@
 add_library(
-    library STATIC
+    ${LIBRARY_NAME} STATIC
     my_lib.cpp
 )
 
 target_include_directories(
-    library PUBLIC 
+    ${LIBRARY_NAME} PUBLIC 
     "./"
 )

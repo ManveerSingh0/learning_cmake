@@ -6,5 +6,20 @@ project(
   LANGUAGES CXX C
   )
 
+#important for cpp files to set their standard version 
+set(CMAKE_CXX_STANDARD          20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS       OFF)
+
+set(LIBRARY_NAME "library")
+
+
+
+option(COMPILE_EXECUTABLE "Whether to compile or not" OFF)
+
 add_subdirectory(src)
-add_subdirectory(app)
+if(COMPILE_EXECUTABLE)
+  add_subdirectory(app)
+else()
+  message("without executable compiling")
+endif()
