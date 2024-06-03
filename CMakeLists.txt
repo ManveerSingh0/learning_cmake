@@ -17,10 +17,10 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 set(EXECUTABLE_NAME "main")
 set(LIBRARY_NAME "library")
 
-option(COMPILE_EXECUTABLE "Where to execute this file or not" OFF)
+option(COMPILE_EXECUTABLE "Where to execute this file or not" ON)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
 
-
+add_subdirectory(configured)
 add_subdirectory(src)
 add_subdirectory(inc)
 
