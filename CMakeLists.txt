@@ -17,9 +17,17 @@ set(CMAKE_CXX_EXTENSIONS        OFF)
 set(EXECUTABLE_NAME "main")
 set(LIBRARY_NAME "library")
 
-
+option(COMPILE_EXECUTABLE "Where to execute this file or not" OFF)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+
 
 add_subdirectory(src)
 add_subdirectory(inc)
-add_subdirectory(app)
+
+#[==[ you can activate this by using cmake .. -DCOMPILE_EXECUTABLE=ON ]==]
+#[==[you can also specifiy which generator to use 
+      cmake .. -G "MinGW Makefiles" and other too 
+]==]
+if(COMPILE_EXECUTABLE)
+  add_subdirectory(app)
+endif()
