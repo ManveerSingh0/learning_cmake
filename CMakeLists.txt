@@ -1,25 +1,23 @@
-cmake_minimum_required(VERSION 3.22.1)
+cmake_minimum_required(VERSION 3.22.1) #[==[ you can setup maximum version by ...<max_version>]==]
 project(
-  main
-  DESCRIPTION "learning cmake"
+  learning_cmake 
+  DESCRIPTION "learning cmake by udemy course"
   VERSION 1.0.0
-  LANGUAGES CXX C
-  )
+  LANGUAGES C CXX
+)
 
-#important for cpp files to set their standard version 
+
+
+#seting up standard for cpp
 set(CMAKE_CXX_STANDARD          20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS       OFF)
-
-set(LIBRARY_NAME "library")
+set(CMAKE_CXX_EXTENSIONS        OFF)
 
 
+set(EXECUTABLE_NAME main)
+set(LIBRARY_NAME library)
 
-option(COMPILE_EXECUTABLE "Whether to compile or not" OFF)
 
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 add_subdirectory(src)
-if(COMPILE_EXECUTABLE)
-  add_subdirectory(app)
-else()
-  message("without executable compiling")
-endif()
+add_subdirectory(app)
