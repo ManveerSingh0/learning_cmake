@@ -28,6 +28,10 @@ add_subdirectory(inc)
 #[==[ you can activate this by using cmake .. -DCOMPILE_EXECUTABLE=ON ]==]
 #[==[you can also specifiy which generator to use 
       cmake .. -G "MinGW Makefiles" and other too 
+
+
+
+      Dont know what it is but --> cmake --build . --target ExternalLibraries_Executable
 ]==]
 if(COMPILE_EXECUTABLE)
   add_subdirectory(app)
