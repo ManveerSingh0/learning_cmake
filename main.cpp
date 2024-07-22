@@ -1,7 +1,7 @@
 #include <iostream>
-
+#include "config.h"
 
 int main(){
-  std::cout << "Hello world" << std::endl;
+  std::cout << PROJECT_VERSION_MINOR << std::endl;
   return 0;
 }

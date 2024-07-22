@@ -41,8 +41,18 @@ message("THIS IS THE PROJECT NAME AT LOW  LEVEL --> ${PROJECT_NAME}")
 #message("${CMAKE_PROJECT_HOMEPAGE_URL}")
 
 
+
+
+configure_file(config.h.in ${${CMAKE_PROJECT_NAME}_SOURCE_DIR}/config.h)
+
+
 add_subdirectory(src)
 add_executable(${CMAKE_PROJECT_NAME})
+
+target_include_directories(
+	${CMAKE_PROJECT_NAME} PRIVATE
+	${CMAKE_PROJECT_SOURCE_DIR}
+)
 
 
 #you can create alias but can only use with specific functions
@@ -71,6 +81,7 @@ target_sources(
 	${CMAKE_PROJECT_NAME} PRIVATE
 	main.cpp
 )
+
 
 
 
