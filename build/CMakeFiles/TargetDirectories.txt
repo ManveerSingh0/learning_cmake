@@ -1,0 +1,5 @@
+/media/hardisk/programming/learning_cmake/cmake_documentation/build/CMakeFiles/learning_cmake.dir
+/media/hardisk/programming/learning_cmake/cmake_documentation/build/CMakeFiles/edit_cache.dir
+/media/hardisk/programming/learning_cmake/cmake_documentation/build/CMakeFiles/rebuild_cache.dir
+/media/hardisk/programming/learning_cmake/cmake_documentation/build/src/CMakeFiles/edit_cache.dir
+/media/hardisk/programming/learning_cmake/cmake_documentation/build/src/CMakeFiles/rebuild_cache.dir
