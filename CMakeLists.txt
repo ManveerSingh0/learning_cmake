@@ -52,6 +52,20 @@ add_executable(${CMAKE_PROJECT_NAME})
 					    OUTPUT_NAME_DEBUG ${CMAKE_PROJECT_NAME}_debug
 )]===]
 
+set(my_list "apple;banana;cherry")
+
+#this add elements to the last in a list 
+list(APPEND my_list "data" "nothing")
+#this add elements to begin() in a list
+list(PREPEND my_list "first_list")
+
+list(INSERT my_list 2 "another_fruit")
+list(REMOVE_ITEM my_list "another_fruit")
+
+#this to get the data from list
+list(GET my_list 3 first_element)
+message("${my_list}")
+
 
 target_sources(
 	${CMAKE_PROJECT_NAME} PRIVATE
