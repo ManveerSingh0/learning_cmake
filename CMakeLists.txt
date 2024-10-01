@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.30.0...3.30.0 FATAL_ERROR)
 #[===[as name suggest works as #include "anyfile"
 	 set(CMAKE_PROJECT_INCLUDE_BEFORE "to_file" or CMAKE_PROJECT_${PROJECT_NAME}_INCLUDE_BEFORE
 ]===]
-
+n
 
 
 project(
@@ -82,7 +82,8 @@ target_sources(
 	main.cpp
 )
 
-
+option(BUILD_SHARED_LIBS "build using shared libraries" ON)
+# BUILD_SHARED_LIBS when you only want to build shared libraries 
 
 
 #This tells where your project should install CMAKE_INSTALL_PREFIX and this checks if it is to default location CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT 
